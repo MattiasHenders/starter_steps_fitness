@@ -1,0 +1,48 @@
+[33mcommit c6b39f10eecb11cc2333f32b7e12595d057ae9c4[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Merge: 2288d10 8a06dff
+Author: Mattias Henders <henders.mattias@gmail.com>
+Date:   Fri Feb 14 13:26:01 2020 -0800
+
+    Fixed conflict in index.html
+
+[33mcommit 2288d1061db915cbcea0f8d8feda7171c88a864f[m
+Author: Mattias Henders <henders.mattias@gmail.com>
+Date:   Fri Feb 14 13:24:26 2020 -0800
+
+    More conflict testing
+
+[33mcommit 8a06dff13de45b07f10eaec5e664d853e29cd957[m
+Author: Thi Hong Phuc Le <plth1998@gmail.com>
+Date:   Fri Feb 14 13:23:22 2020 -0800
+
+    add header
+
+[33mcommit bc0368ea8c35f8311229cc8495d889d99cd3ee01[m
+Author: Mattias Henders <henders.mattias@gmail.com>
+Date:   Fri Feb 14 13:19:44 2020 -0800
+
+    Testing conflicts
+
+[33mcommit 6a724c42d143beb434b3722e6f9a60bf273b3f9f[m
+Author: Mattias Henders <henders.mattias@gmail.com>
+Date:   Fri Feb 14 13:18:41 2020 -0800
+
+    Changed intro.html file location
+
+[33mcommit 237f1ca722c8e047404b4af626d53ccc309e2dc7[m
+Author: Thi Hong Phuc Le <plth1998@gmail.com>
+Date:   Fri Feb 14 13:16:45 2020 -0800
+
+    update file
+
+[33mcommit 00c4366e6e7d77fdd566d21f8c947a9fb5840f15[m
+Author: Mattias Henders <henders.mattias@gmail.com>
+Date:   Fri Feb 14 13:11:07 2020 -0800
+
+    Added Workout Page and put my name on the index
+
+[33mcommit 54da87d06161fb9673ff6404d905377801b800f5[m
+Author: Mattias Henders <henders.mattias@gmail.com>
+Date:   Fri Feb 14 12:49:58 2020 -0800
+
+    Initilizing the repo with dummy files.
