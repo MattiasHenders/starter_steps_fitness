@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>My BCIT Project</title>
@@ -22,19 +21,14 @@
     <!-- Your own CSS files -->
     <!------------------------>
     <link rel="stylesheet" href="styles/style.css">
-</head>
 
+</head>
 <body>
     <!------------------->
     <!--  HTML Section -->
     <!------------------->
 
-    <h1 id="Title">Welcome to Start Steps Fitness!</h1>
-    <h2 id="Title">This is the Results Page</h2>
-
-    <hr>
-
-    <p>Hello from Vicly Xinyue Cao!</p>
+    <h1>Hello, world!</h1>
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, other API's    -->
@@ -52,6 +46,6 @@
     <!-- JS files: Your own JavaScripts go here    -->
     <!----------------------------------------------->
     <script src="scripts/script.js"></script>
-</body>
 
-</html>
+</body>
+</html>                            
