@@ -1,0 +1,11 @@
+#login {
+    position: absolute;
+    top: 40vh;
+    font-size: 2em;
+}
+
+#signup {
+    position: absolute;
+    top: 60vh;
+    font-size: 2em;
+}
