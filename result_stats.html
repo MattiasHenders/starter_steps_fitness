@@ -30,20 +30,29 @@
     <!--  HTML Section -->
     <!------------------->
 
-    <h1 id="Title" class = "text-center welcome">Progress Tracker Center</h1>
+    <h1 id="Title" class = "text-center welcome pb-3">Progress Tracker</h1>
+    <h2 id="Subtitle" class = "text-center">Personal Stats</h2>
+    <h3 id="complete" class = "text-center">Past Month:</h3>
+
+
 
     <hr>
 
-    <img src="images/notepad.png" id="notepad" class="center bottombuttons mt-5">
-
-    <div id="buttons" class ="text-center">
-        <button type="button" class="btn btn-primary btn-large btn-block" id = "activities" onclick="window.location.href = 'result_activities.html';">View Activities Completed</button>
+    <div id="Chart1" style="height: 370px; width: 100%;"></div>
     
-        <button type="button" class="btn btn-info btn-large btn-block" id = "stats" onclick = "window.location.href = 'result_stats.html';">View Personal Stats</button>
+    <hr>
+
+    <div id="Chart2" style="height: 370px; width: 100%;"></div>
+
+    <hr>
+   
+    <div id="buttons" class ="text-center bottombuttons mt-0">
+        <button type="button" class="btn btn-primary btn-large btn-block" id = "specific2" onclick="window.location.href = 'result_check.html';">Check a specific time</button>
+    
+        <button type="button" class="btn btn-info btn-large btn-block" id = "trackercenter" onclick="window.location.href = 'result.html';" >Go to Process Tracker Center</button>
 
         <button type="button" class="btn btn-secondary btn-large btn-block" id = "home">User Profile</button>
     </div>
-    
 
 
     <!----------------------------------------------->
@@ -61,7 +70,9 @@
     <!----------------------------------------------->
     <!-- JS files: Your own JavaScripts go here    -->
     <!----------------------------------------------->
-    <script src="scripts/script.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="scripts/result_stats.js"></script>
+    
 </body>
 
 </html>
