@@ -30,20 +30,57 @@
     <!--  HTML Section -->
     <!------------------->
 
-    <h1 id="Title" class = "text-center welcome">Progress Tracker Center</h1>
+    <h1 id="Title" class = "text-center welcome pb-3">Progress Tracker</h1>
+
+    <h3 id="complete" class = "text-center">Today you completed:</h3>
 
     <hr>
-
-    <img src="images/notepad.png" id="notepad" class="center bottombuttons mt-5">
-
-    <div id="buttons" class ="text-center">
-        <button type="button" class="btn btn-primary btn-large btn-block" id = "activities" onclick="window.location.href = 'result_activities.html';">View Activities Completed</button>
+    <table class="table table-striped table-dark mt-5">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Activity</th>
+            <th scope="col">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Running</td>
+            <td>2 km</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Swimming</td>
+            <td>30 min</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Push Up</td>
+            <td>50 reps</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Jogging</td>
+            <td>20 min</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>Benchpress</td>
+            <td>150lbs, 10rep</td>
+          </tr>
+        </tbody>
+      </table>
+      
+    <hr>
+   
+    <div id="buttons" class ="text-center bottombuttons mt-0">
+        <button type="button" class="btn btn-primary btn-large btn-block" id = "specific" href="#">Check a specific time</button>
     
-        <button type="button" class="btn btn-info btn-large btn-block" id = "stats">View Personal Stats</button>
+        <button type="button" class="btn btn-info btn-large btn-block" id = "trackercenter" onclick="window.location.href = 'result.html';" >Go to Process Tracker Center</button>
 
         <button type="button" class="btn btn-secondary btn-large btn-block" id = "home">User Profile</button>
     </div>
-    
 
 
     <!----------------------------------------------->
