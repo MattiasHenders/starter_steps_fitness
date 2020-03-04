@@ -1,0 +1,13 @@
+#progress{
+    background-color: #F4976C;
+}
+h1{
+    text-align: center;
+    font-size: 3vw;
+}
+
+#userPic{
+    /* position: absolute; */
+    width: 70px;
+    height: 70px;
+}
