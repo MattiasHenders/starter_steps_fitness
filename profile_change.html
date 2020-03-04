@@ -36,31 +36,65 @@
         <p >User name:</p>
     </div>
    
-    <div class="card py-2">
-        <div class="card-body">
-          Harry Smith
-        </div>
+    <!-- <input class="form-control" type="text" placeholder="Harry Smith" readonly=""> -->
+    <div class="form-group">
+        <input id="focusedInput" class="form-control" type="text" placeholder="Harry Smith">
     </div>
 
     <div class="py-2">
         <p>Age:</p>
     </div>
 
-    <div class="card py-2">
-        <div class="card-body">
-          24
-        </div>
-    </div>
+
+    <form class="py-2">
+        <select name="ages" class="custom-select">
+          <!-- <option selected>Ages</option> -->
+          <option value="1980">1980</option>
+          <option value="1981">1981</option>
+          <option value="1982">1982</option>
+          <option value="1983">1983</option>
+          <option value="1984">1984</option>
+          <option value="1985">1985</option>
+          <option value="1986">1986</option>
+          <option value="1987">1987</option>
+          <option value="1988">1988</option>
+          <option value="1989">1989</option>
+
+          <option value="1980">1990</option>
+          <option value="1981">1991</option>
+          <option value="1982">1992</option>
+          <option value="1983">1993</option>
+          <option value="1984">1994</option>
+          <option value="1985">1995</option>
+          <option value="1986">1996</option>
+          <option value="1987">1997</option>
+          <option value="1988">1998</option>
+          <option value="1989">1999</option>
+
+          <option value="1980">2000</option>
+          <option value="1981">2001</option>
+          <option value="1982">2002</option>
+          <option value="1983">2003</option>
+
+        </select>
+      </form>
+
 
     <div class="py-2">
         <p>Sex</p>
     </div>
 
-    <div class="card py-2">
-        <div class="card-body">
-          Male
-        </div>
-    </div>
+    <form class="py-2">
+        <select name="sex" class="custom-select">
+          <!-- <option selected>Sex</option> -->
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+        </select>
+    </form>
+
+    <form>
+       
+      </form>
 
     <form class="py-2">
         <div class="row py-2">
@@ -73,64 +107,43 @@
           </div>
         <div class="row py-2">
           <div class="col">
-            <div class="card">
-                <div class="card-body">
-                  57 kg
-                </div>
-            </div>
-        
+            <input type="text" class="form-control" placeholder="57kg" name="wei">
           </div>
           <div class="col">
-            <div class="card">
-                <div class="card-body">
-                  170 cm
-                </div>
-            </div>
+            <input type="text" class="form-control" placeholder="170cm" name="hei">
           </div>
         </div>
       </form>
-    <!-- <div>
-        <p>Weight:</p>
-    </div>
-
-    <div class="card">
-        <div class="card-body">
-          57 kg
-        </div>
-    </div>
-
-    <div>
-        <p>Height:</p>
-    </div>
-
-    <div class="card">
-        <div class="card-body">
-          170 cm
-        </div>
-    </div> -->
-
+    
     <div class="py-2">
         <p>Level:</p>
     </div>
 
-    <div class="card py-2">
-        <div class="card-body">
-          Beginner
-        </div>
-    </div>
+    <form class="py-2">
+        <select name="levels" class="custom-select">
+          <!-- <option selected>Level</option> -->
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="expert">Expert</option>
+        </select>
+      </form>
 
     <div class="py-2">
         <p>Fitness Goal:</p>
     </div>
 
-    <div class="card py-2">
-        <div class="card-body">
-          Gain Muscle
+    <div class="checkbox">
+        <label><input type="checkbox" value="Gain muscles"> Gain muscles</label>
+        </div>
+        <div class="checkbox">
+        <label><input type="checkbox" value="Lose weight"> Lose weight</label>
+        </div>
+        <div class="checkbox">
+        <label><input type="checkbox" value="Keep healthy status"> Keep healthy status</label>
         </div>
     </div>
-</div>
 <div class="text-center">
-    <button type="button" class="btn btn-primary btn-lg" >Change</button>
+    <button type="button" class="btn btn-primary btn-lg">Save</button>
 </div>
 
     
