@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Starter Steps Fitness</title>
+    <meta name="ssf profile page" content="user profile">
+    <meta name="author" content="Group 30">
+    <link rel = "shortcut icon" href = "images/icon.png">
+
+    <!----------------------------------------------->
+    <!--  Meta tag for rendering on mobile devices -->
+    <!----------------------------------------------->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!----------------------------------------------->
+    <!-- CSS: Bootstrap, Firebase, other API -->
+    <!----------------------------------------------->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+   
+    <!------------------------>
+    <!-- Your own CSS files -->
+    <!------------------------>
+    <link rel="stylesheet" href="styles/result.css">
+    <link rel="stylesheet" href="styles/master.css">
+</head>
+
+<body>
+    <!------------------->
+    <!--  HTML Section -->
+    <!------------------->
+
+    <h1 id="Title" class = "text-center welcome pb-3">User Profile</h1>
+    <h2 id="Subtitle" class = "text-center">Workout Schedule</h2>
+
+    <hr>
+    <form>
+        <div class="form-group">
+          <label for="activity">Activity</label>
+          <select class="form-control">
+            <option></option>
+            <option>Swimming</option>
+            <option>Benchpress</option>
+            <option>Running</option>
+            <option>Jogging</option>
+            <option>Pushup</option>
+            
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="amount">Amount</label>
+          <input type="amount" class="form-control" id="amount" placeholder="1">
+          <select class="form-control mt-1">
+            <option></option>
+            <option>hr</option>
+            <option>min</option>
+            <option>rep</option>
+            <option>km</option>
+            <option>lb</option>
+            
+          </select>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Save Change</button>
+      </form>
+    <hr>
+   
+    <div id="buttons" class ="text-center bottombuttons mt-0">
+        <button type="button" class="btn btn-primary btn-large btn-block" id = "specific" onclick="window.location.href = 'profile_schedule.html';">Workout Schedule</button>
+    
+        <button type="button" class="btn btn-info btn-large btn-block" id = "trackercenter" onclick="window.location.href = 'profile_review.html';" >User Profile</button>
+
+        <button type="button" class="btn btn-secondary btn-large btn-block" id = "home" onclick = "window.location.href = 'main.html';">Home</button>
+    </div>
+
+
+    <!----------------------------------------------->
+    <!-- JS: Boostrap, Firebase, other API's    -->
+    <!----------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script src="/__/firebase/7.9.1/firebase-app.js"></script>
+    <script src="/__/firebase/7.9.1/firebase-auth.js"></script>
+    <script src="/__/firebase/7.9.1/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script src="/scripts/firebase-starter-steps-fitness.js"></script>
+
+    <!----------------------------------------------->
+    <!-- JS files: Your own JavaScripts go here    -->
+    <!----------------------------------------------->
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
