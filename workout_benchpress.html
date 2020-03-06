@@ -237,7 +237,40 @@
     <!----------------------------------------------->
     <!-- JS files: Your own JavaScripts go here    -->
     <!----------------------------------------------->
-    <script src="scripts/script.js"></script>
+    <script>
+    /*
+
+        TEST CODE FOR FIREBASE
+
+    function getQuote() {
+            db.collection("quotes")
+                .doc("01")
+                .onSnapshot(
+                    function (snap) {
+                        // do something
+                        console.log(snap.data());
+                        document.getElementById("quote").innerHTML = snap.data().message;
+                        document.getElementById("name").innerHTML = snap.data().name;
+
+                    }
+                );
+        }
+
+        getQuote();
+
+        function writeCity() {
+            db.collection("cities").add({
+                    name: "Tokyo",
+                    country: "Japan"
+                })
+                .then(function (docRef) {
+                    console.log("Document written with ID :", docRef.id);
+                })
+        }
+        writeCity();
+    
+        */
+    </script>
 
 </body>
 
