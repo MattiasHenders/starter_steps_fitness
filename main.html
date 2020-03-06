@@ -4,9 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title>Starter Steps Fitness</title>
-    <meta name="ssf progress tracker page" content="progress tracker">
-    <meta name="author" content="Group 30">
-    <link rel = "shortcut icon" href = "images/icon.png">
+    <meta name="comp1800 boilerplate code" content="my bcit project">
+    <meta name="author" content="BCIT">
 
     <!----------------------------------------------->
     <!--  Meta tag for rendering on mobile devices -->
@@ -22,31 +21,50 @@
     <!------------------------>
     <!-- Your own CSS files -->
     <!------------------------>
-    <link rel="stylesheet" href="styles/result.css">
     <link rel="stylesheet" href="styles/master.css">
+    <link rel = "shortcut icon" href = "images/icon.png">
 </head>
 
 <body>
     <!------------------->
     <!--  HTML Section -->
     <!------------------->
+    <!-- <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a href="#" class="navbar-brand">
+            <img src="images/icon.png" height="50" alt="Fitness">
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="intro.html" class="nav-item nav-link">Intro</a>
+                <a href="result.html" class="nav-item nav-link">Result</a>
+                <a href="workout.html" class="nav-item nav-link">Workout</a>
+            </div>
+            <div class="navbar-nav ml-auto">
+                <a href="#" class="nav-item nav-link">Login</a>
+            </div>
+        </div>
+    </nav> -->
+    <h1 id="Title" class="text-center welcome">Welcome to Starter Steps Fitness</h1>
 
-    <h1 id="Title" class = "text-center welcome">Progress Tracker Center</h1>
 
-    <hr>
+    <img src="images/icon.png" class="center rounded-circle img-fluid" style="height: 300px; width: 300px; border:3px solid black;">
 
-    <img src="images/notepad.png" id="notepad" class="center bottombuttons mt-5">
+    <h2 id="SubTitle" class="text-center mt-5">"No pain no gain" - Franis</h2>
+
 
     <div id="buttons" class ="text-center">
-        <button type="button" class="btn btn-primary btn-large btn-block" id = "activities" onclick="window.location.href = 'result_activities.html';">View Activities Completed</button>
+        <button type="button" class="btn btn-success btn-large btn-block mt-5" id = "login"  onclick = "window.location.href = 'workout_benchpress.html';">Start Exercise</button>
     
-        <button type="button" class="btn btn-info btn-large btn-block" id = "stats" onclick = "window.location.href = 'result_stats.html';">View Personal Stats</button>
+        <button type="button" class="btn btn-warning btn-large btn-block mt-5" id = "signup" onclick = "window.location.href = 'profile_review.html';">User Profile</button>
 
-        <button type="button" class="btn btn-secondary btn-large btn-block" id = "home" onclick = "window.location.href = 'main.html';">Home</button>
+        
+        <button type="button" class="btn btn-light btn-large btn-block mt-5" id = "signup" onclick = "window.location.href = 'result.html';" >Process Tracker</button>
     </div>
     
-
-
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, other API's    -->
     <!----------------------------------------------->
@@ -63,6 +81,7 @@
     <!-- JS files: Your own JavaScripts go here    -->
     <!----------------------------------------------->
     <script src="scripts/script.js"></script>
+
 </body>
 
 </html>
