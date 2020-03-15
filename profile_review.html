@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
     <link type="text/css" rel="stylesheet" href="styles/master.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <!------------------------>
     <!-- Your own CSS files -->
     <!------------------------>
@@ -134,14 +135,23 @@
     <button type="button" onclick="window.location.href = 'profile_change.html';" class="btn btn-primary btn-lg" >Edit</button>
 </div>
 
-<div class="text-center py-2">
+<!-- <div class="text-center py-2">
   <button type="button" onclick="window.location.href='profile_schedule.html';" class = "btn btn-primary btn-lg" >Workout Schedule</button>
 </div>
 
 <div id="buttons" class ="text-center bottombuttons mt-0">
 
   <button type="button" class="btn btn-secondary btn-large btn-block" id = "home" onclick = "window.location.href = 'main.html';">Home</button>
-</div>
+</div> -->
+
+<div class="py-5"></div>
+    <div class="icon-bar">
+      <a href="#"><i class="far fa-running" onclick="window.location.href='result.html'"></i></a>
+      <a href="#"><i class="far fa-dumbbell" onclick="window.location.href='workout.html'"></i></a>  
+      <a href="#"><i class="far fa-home" onclick="window.location.href='main.html'"></i></a> 
+      <a href="#"><i class="far fa-calendar-alt" onclick="window.location.href='profile_schedule.html'"></i></a> 
+      <a class="active" href="#"><i class="fas fa-user" onclick="window.location.href='profile_review.html'"></i></a>
+  </div>
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, other API's    -->
@@ -160,6 +170,7 @@
     <!-- JS files: Your own JavaScripts go here    -->
     <!----------------------------------------------->
     <script src="scripts/script.js"></script>
+    <script src="scripts/iconbar.js"></script>
 
 </body>
 </html>                            

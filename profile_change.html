@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
     <link type="text/css" rel="stylesheet" href="styles/master.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <!------------------------>
     <!-- Your own CSS files -->
     <!------------------------>
@@ -28,7 +29,7 @@
     <!------------------->
     <!--  HTML Section -->
     <!------------------->
-    <h1>User Profile</h1>
+    <h1 id="Title" class = "text-center welcome">User Profile</h1>
     <div class="text-center" >
         <img id="userPic" src="images/usericon.jpg" class="rounded-circle img-fluid" alt="Profile picture" >
       </div>
@@ -38,12 +39,14 @@
     </div>
    
     <!-- <input class="form-control" type="text" placeholder="Harry Smith" readonly=""> -->
-    <div class="form-group">
-        <input id="focusedInput" class="form-control" type="text" placeholder="Harry Smith">
+    <div class="card">
+        <div class="card-body">
+        Harry Smith
+        </div>
     </div>
 
     <div class="py-2">
-        <p>Age:</p>
+        <p class="pt-2">Age:</p>
     </div>
 
 
@@ -75,6 +78,30 @@
           <option value="41">41</option>
           <option value="42">42</option>
           <option value="43">43</option>
+          <option value="44">44</option>
+          <option value="45">45</option>
+          <option value="46">46</option>
+          <option value="47">47</option>
+          <option value="48">48</option>
+          <option value="49">49</option>
+
+          <option value="50">50</option>
+          <option value="51">51</option>
+          <option value="52">52</option>
+          <option value="53">53</option>
+          <option value="54">54</option>
+          <option value="55">55</option>
+          <option value="56">56</option>
+          <option value="57">57</option>
+          <option value="58">58</option>
+          <option value="59">59</option>
+
+          <option value="60">60</option>
+          <option value="61">61</option>
+          <option value="62">62</option>
+          <option value="63">63</option>
+          <option value="64">64</option>
+          <option value="65">65</option>
         </select>
       </form>
 
@@ -91,9 +118,9 @@
         </select>
     </form>
 
-    <form>
+    <!-- <form>
        
-      </form>
+      </form> -->
 
     <form class="py-2">
         <div class="row py-2">
@@ -120,7 +147,6 @@
 
     <form class="py-2">
         <select name="levels" class="custom-select">
-          <!-- <option selected>Level</option> -->
           <option value="beginner">Beginner</option>
           <option value="intermediate">Intermediate</option>
           <option value="expert">Expert</option>
@@ -132,23 +158,32 @@
     </div>
 
     <div class="checkbox">
-        <label><input type="checkbox" value="Gain muscles"> Gain muscles</label>
-        </div>
-        <div class="checkbox">
-        <label><input type="checkbox" value="Lose weight"> Lose weight</label>
-        </div>
-        <div class="checkbox">
-        <label><input type="checkbox" value="Keep healthy status"> Keep healthy status</label>
-        </div>
+      <label><input type="checkbox" value="Gain muscles"> Gain muscles</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" value="Lose weight"> Lose weight</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" value="Keep healthy status"> Keep healthy status</label>
+    </div>
     </div>
 <div class="text-center">
     <button type="button" onclick="window.location.href='profile_review.html';" class="btn btn-primary btn-lg">Save</button>
 </div>
 
-<div id="buttons" class ="text-center bottombuttons mt-0">
+<!-- <div id="buttons" class ="text-center bottombuttons mt-0">
 
   <button type="button" class="btn btn-secondary btn-large btn-block" id = "home" onclick = "window.location.href = 'main.html';">Home</button>
+</div> -->
+<div class="py-5"></div>
+<div class="icon-bar">
+  <a href="#"><i class="far fa-running" onclick="window.location.href='result.html'"></i></a>
+  <a href="#"><i class="far fa-dumbbell" onclick="window.location.href='workout.html'"></i></a>  
+  <a href="#"><i class="far fa-home" onclick="window.location.href='main.html'"></i></a> 
+  <a href="#"><i class="far fa-calendar-alt" onclick="window.location.href='profile_schedule.html'"></i></a> 
+  <a class="active" href="#"><i class="fas fa-user" onclick="window.location.href='profile_review.html'"></i></a>
 </div>
+
     
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, other API's    -->
@@ -167,6 +202,6 @@
     <!-- JS files: Your own JavaScripts go here    -->
     <!----------------------------------------------->
     <script src="scripts/script.js"></script>
-
+    <script src="scripts/iconbar.js"></script>
 </body>
 </html>                            
