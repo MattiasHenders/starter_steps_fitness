@@ -1,6 +1,6 @@
 new Promise(function (resolve, reject) {
     let workoutNames = getWorkout();
-    setTimeout(() => resolve(workoutNames), 2000);
+    setTimeout(() => resolve(workoutNames), 2500);
 
 }).then(function (names) {
     setWorkout(names);
