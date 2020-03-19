@@ -40,8 +40,8 @@
    
     <!-- <input class="form-control" type="text" placeholder="Harry Smith" readonly=""> -->
     <div class="card">
-        <div class="card-body">
-        Harry Smith
+        <div class="card-body" id = "userName">
+        
         </div>
     </div>
 
@@ -51,7 +51,18 @@
 
 
     <form class="py-2">
-        <select name="ages" class="custom-select">
+        <select name="ages" class="custom-select" id = "changeAge">
+          <option value="20">10</option>
+          <option value="21">11</option>
+          <option value="22">12</option>
+          <option value="23">13</option>
+          <option value="24">14</option>
+          <option value="25">15</option>
+          <option value="26">16</option>
+          <option value="27">17</option>
+          <option value="28">18</option>
+          <option value="29">19</option>
+          
           <option value="20">20</option>
           <option value="21">21</option>
           <option value="22">22</option>
@@ -111,7 +122,7 @@
     </div>
 
     <form class="py-2">
-        <select name="sex" class="custom-select">
+        <select name="sex" class="custom-select" id = "changeSex">
           <!-- <option selected>Sex</option> -->
           <option value="female">Female</option>
           <option value="male">Male</option>
@@ -133,10 +144,10 @@
           </div>
         <div class="row py-2">
           <div class="col">
-            <input type="text" class="form-control" placeholder="57kg" name="wei">
+            <input type="text" class="form-control" placeholder="kg" name="wei" id = "changeWeight">
           </div>
           <div class="col">
-            <input type="text" class="form-control" placeholder="170cm" name="hei">
+            <input type="text" class="form-control" placeholder="cm" name="hei" id = "changeHeight">
           </div>
         </div>
       </form>
@@ -146,7 +157,7 @@
     </div>
 
     <form class="py-2">
-        <select name="levels" class="custom-select">
+        <select name="levels" class="custom-select" id = "changeLevel">
           <option value="beginner">Beginner</option>
           <option value="intermediate">Intermediate</option>
           <option value="expert">Expert</option>
@@ -168,7 +179,7 @@
     </div>
     </div>
 <div class="text-center">
-    <button type="button" onclick="window.location.href='profile_review.html';" class="btn btn-primary btn-lg">Save</button>
+    <button type="button" class="btn btn-primary btn-lg" id = "save">Save</button>
 </div>
 
 <!-- <div id="buttons" class ="text-center bottombuttons mt-0">
@@ -203,5 +214,6 @@
     <!----------------------------------------------->
     <script src="scripts/script.js"></script>
     <script src="scripts/iconbar.js"></script>
+    <script src="scripts/profile_change.js"></script>
 </body>
 </html>                            
