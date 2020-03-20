@@ -15,7 +15,8 @@ function savedata(){
             "Sex": document.querySelector("#changeSex").value,
             "Weight": document.querySelector("#changeWeight").value,
             "Height": document.querySelector("#changeHeight").value,
-            "Level": document.querySelector("#changeLevel").value
+            "Level": document.querySelector("#changeLevel").value,
+            "Goal": document.querySelector("#changeGoal").value
 
 
         })

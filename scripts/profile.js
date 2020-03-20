@@ -8,9 +8,9 @@ firebase.auth().onAuthStateChanged(function(user){
 
         document.querySelector("#userSex").innerHTML = snap.data().Sex;
 
-        document.querySelector("#userWeight").innerHTML = snap.data().Weight;
+        document.querySelector("#userWeight").innerHTML = snap.data().Weight + " kg";
         
-        document.querySelector("#userHeight").innerHTML = snap.data().Height;
+        document.querySelector("#userHeight").innerHTML = snap.data().Height + " cm";
 
         document.querySelector("#userLevel").innerHTML = snap.data().Level;
 
