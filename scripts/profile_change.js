@@ -19,21 +19,12 @@ function savedata(){
 
 
         })
-    
-        
-    // localStorage.setItem("Age", document.querySelector("#changeAge").value);
-    // localStorage.setItem("Weight", document.querySelector("#changeWeight").value);
-      
-
-
-
-
-
-      
+  
     })
 
-
-
+    setTimeout(function(){
+        window.location.href="profile_review.html";
+    }, 2000);
 
 }
 
