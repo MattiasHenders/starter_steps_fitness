@@ -10,7 +10,7 @@ function savedata(){
 
     firebase.auth().onAuthStateChanged(function(user){
     
-        db.collection("users/").doc(user.uid).update({
+       var promise = db.collection("users/").doc(user.uid).update({
             "Age": document.querySelector("#changeAge").value,
             "Sex": document.querySelector("#changeSex").value,
             "Weight": document.querySelector("#changeWeight").value,
@@ -20,12 +20,9 @@ function savedata(){
 
 
         })
-  
-    })
-
-    setTimeout(function(){
-        window.location.href="profile_review.html";
-    }, 2000);
+        promise.then(function(){
+            window.location.href="profile_review.html";
+        });
+    });
 
 }
-
