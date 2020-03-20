@@ -38,7 +38,6 @@
         <p >User name:</p>
     </div>
    
-    <!-- <input class="form-control" type="text" placeholder="Harry Smith" readonly=""> -->
     <div class="card">
         <div class="card-body" id = "userName">
         
@@ -168,7 +167,15 @@
         <p>Fitness Goal:</p>
     </div>
 
-    <div class="checkbox">
+    <form class="py-2">
+      <select name="goals" class="custom-select" id = "changeGoal">
+        <option value="Gain muscles">Gain muscles</option>
+        <option value="Lose weight">Lose weight</option>
+        <option value="Keep healthy status">Keep healthy status</option>
+      </select>
+    </form>
+    </div>
+    <!-- <div class="checkbox">
       <label><input type="checkbox" value="Gain muscles"> Gain muscles</label>
     </div>
     <div class="checkbox">
@@ -177,7 +184,7 @@
     <div class="checkbox">
       <label><input type="checkbox" value="Keep healthy status"> Keep healthy status</label>
     </div>
-    </div>
+    </div> -->
 <div class="text-center">
     <button type="button" class="btn btn-primary btn-lg" id = "save">Save</button>
 </div>
