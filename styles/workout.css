@@ -16,7 +16,7 @@ body{
     display: inline-block;
 }
 
-#workoutInput {
+input {
     text-align: center;
     font-size: xx-large;
     width: 100%;
