@@ -40,6 +40,16 @@ input {
     width: 100%;
 }
 
+#submitButton {
+    color: white;
+    background-color: lightskyblue;
+    border: none;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: x-large;
+    width: 100%;
+}
+
 .page-link {
     color: #111111;
 }

@@ -30,17 +30,7 @@ function getUserGoal() {
         });
     })
 }
-/*
-function getReps() {
-    let reps = [];
-    firebase.auth().onAuthStateChanged(function () {
-        db.collection("workouts/gainMuscle/exercises").doc().onSnapshot(function (doc) {
-            reps.push(doc.data()["Rep(#)"]);
-            localStorage.setItem(1, reps);
-        });
-    })
-}
-*/
+
 function getWorkout(userGoal) {
     let name = [];
     if (userGoal == "Gain muscles") {
@@ -130,18 +120,51 @@ function setWorkout(workoutNames) {
 
 }
 
-// EDIT THIS
 function setNumericalValues(numericalArray) {
 
-    let reps = (numericalArray[0]);
+    let reps = numericalArray[0];
     let weight = numericalArray[1];
     let distance = numericalArray[2];
 
     console.log(reps.length);
     for (let i = 0; i < 5; i++) {
         for (let j = 0; j < 5; j++) {
-            document.getElementById("weight" + (i + 1) + "-" + (j + 1)).value = weight[i];
-            document.getElementById("rep" + (i + 1) + "-" + (j + 1)).value = reps[i];
+            if(weight[i] == undefined){
+                removeElement("weightCol" + (i + 1) + "-" + (j + 1));
+                document.getElementById("repText" + (i + 1) + "-" + (j + 1)).innerHTML = "Distance (km)";
+                document.getElementById("rep" + (i + 1) + "-" + (j + 1)).id = "distance" + (i + 1) + "-" + (j + 1);
+                document.getElementById("distance" + (i + 1) + "-" + (j + 1)).value = distance[i];
+            } else {
+                document.getElementById("weight" + (i + 1) + "-" + (j + 1)).value = weight[i];
+                document.getElementById("rep" + (i + 1) + "-" + (j + 1)).value = reps[i];
+            }
         }
     }
 }
+
+function removeElement(elementId) {
+    // Removes an element from the document
+    var element = document.getElementById(elementId);
+    element.parentNode.removeChild(element);
+}
+
+function getFinishedWorkout(numericalArray) {
+
+    let finishedDistance = [];
+    let finishedWeight = [];
+    let finishedRep = [];
+
+    for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 5; j++) {
+            if(document.getElementById("weight" + (i + 1) + "-" + (j + 1)) == null){
+                finishedDistance[i] = document.getElementById("distance" + (i + 1) + "-" + (j + 1)).value;
+            } else {
+                finishedWeight[i] = document.getElementById("weight" + (i + 1) + "-" + (j + 1)).value;
+                finishedRep[i] = document.getElementById("rep" + (i + 1) + "-" + (j + 1)).value;
+            }
+        }
+    }
+    console.log([finishedRep, finishedWeight, finishedDistance]);
+}
+
+document.getElementById("submitButton").onclick = getFinishedWorkout;
