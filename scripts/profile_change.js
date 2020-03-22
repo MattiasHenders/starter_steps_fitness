@@ -26,3 +26,26 @@ function savedata(){
     });
 
 }
+
+function showDefault(){
+    firebase.auth().onAuthStateChanged(function(user){
+    
+        db.collection("users/").doc(user.uid).onSnapshot(function(snap){
+    
+            // document.getElementById("defaultAge").selected = snap.data().Age;
+    
+            // document.getElementById("defaultSex").selected = snap.data().Sex;
+    
+            document.getElementById("changeWeight").defaultValue = snap.data().Weight;
+            
+            document.getElementById("changeHeight").defaultValue = snap.data().Height;
+    
+            // document.getElementById("defaultLevel").defaultValue = snap.data().Level;
+    
+            // document.getElementById("defaultGoal").defaultValue = snap.data().Goal;
+        });
+    
+    })
+}
+
+showDefault();

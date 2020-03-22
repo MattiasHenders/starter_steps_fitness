@@ -35,16 +35,16 @@
     <!-- <h2 id="Subtitle" class = "text-center">Workout Schedule</h2> -->
 
     <hr>
-    <form>
+    <!-- <form>
         <div class="form-group">
           <label for="activity">Activity</label>
           <select class="form-control">
             <option></option>
-            <option>Swimming</option>
-            <option>Benchpress</option>
+            <option>Bench press</option>
+            <option>Dead lift</option>
+            <option>Over head press</option>
             <option>Running</option>
-            <option>Jogging</option>
-            <option>Pushup</option>
+            <option>Squat</option>
             
           </select>
         </div>
@@ -60,16 +60,120 @@
             <option>lb</option>
             
           </select>
-        </div>
+        </div> -->
+
+        <table class="table table-striped table-dark mt-5">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Activity</th>
+              <th scope="col">Reps(#)</th>
+              <th scope="col">Weight(lbs)</th>
+              <th scope="col">Distance(km)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Bench press</td>
+              <td>
+                <form class="form-inline">
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="benchRep" id = "changeBenchRep" value="---">
+                  </div>
+                </form>
+              </td>
+              <td>
+                <form class="form-inline">
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="benchWei" id = "changeBenchWei" value="---">
+                  </div>
+                </form>
+              </td>
+              <td>None</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Dead lift</td>
+              <td>
+                <form class="form-inline">
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="liftRep" id = "changeLiftRep" value="---">
+                  </div>
+                </form>
+              </td>
+              <td>
+                <form class="form-inline">
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="liftWei" id = "changeLiftWei" value="---">
+                  </div>
+                </form>
+              </td>
+              <td>None</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Over head press</td>
+              <td>
+                <form class="form-inline">
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="headRep" id = "changeHeadRep" value="---">
+                  </div>
+                </form>
+              </td>
+              <td>
+                <form class="form-inline">
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="headWei" id = "changeHeadWei" value="---">
+                  </div>
+                </form>
+              </td>
+              <td>None</td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>Running</td>
+              <td>None</td>
+              <td>None</td>
+              <td>
+                <form class="form-inline">
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="runTime" id = "changeKm" value="---">
+                  </div>
+                </form>
+              
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td>Squat</td>
+              <td>
+                <form class="form-inline">
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="squatRep" id = "changeSquatRep" value="---">
+                  </div>
+                </form>
+              </td>
+              <td>
+                <form class="form-inline">
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="squatWei" id = "changeSquatWei" value="---">
+                  </div>
+                </form>
+              </td>
+              <td>None</td>
+            </tr>
+          </tbody>
+        </table>
         
-        <button type="submit" class="btn btn-primary">Save Change</button>
+        <button type="submit" class="btn btn-primary" id="save">Save Change</button>
       </form>
     <hr>
    
     <div id="buttons" class ="text-center bottombuttons mt-0">
         <button type="button" class="btn btn-primary btn-large btn-block" id = "specific" onclick="window.location.href = 'profile_schedule.html';">Workout Schedule</button>
     
-        <button type="button" class="btn btn-info btn-large btn-block" id = "trackercenter" onclick="window.location.href = 'profile_review.html';" >User Profile</button>
+        <!-- <button type="button" class="btn btn-info btn-large btn-block" id = "trackercenter" onclick="window.location.href = 'profile_review.html';" >User Profile</button> -->
 
         <!-- <button type="button" class="btn btn-secondary btn-large btn-block" id = "home" onclick = "window.location.href = 'main.html';">Home</button> -->
     </div>
@@ -99,7 +203,8 @@
     <!-- JS files: Your own JavaScripts go here    -->
     <!----------------------------------------------->
     <script src="scripts/iconbar.js"></script>
-    <script src="scripts/profile.js"></script>
+    <!-- <script src="scripts/profile.js"></script> -->
+    <script src="scripts/changeSchedule.js"></script>
 </body>
 
 </html>

@@ -51,6 +51,7 @@
 
     <form class="py-2">
         <select name="ages" class="custom-select" id = "changeAge">
+          <!-- <option id="defaultAge" value="---"></option> -->
           <option value="10">10</option>
           <option value="11">11</option>
           <option value="12">12</option>
@@ -117,12 +118,13 @@
 
 
     <div class="py-2">
-        <p>Sex</p>
+        <p>Sex:</p>
     </div>
 
     <form class="py-2">
         <select name="sex" class="custom-select" id = "changeSex">
           <!-- <option selected>Sex</option> -->
+          <!-- <option value="---" id="defaultSex"></option> -->
           <option value="Female">Female</option>
           <option value="Male">Male</option>
         </select>
@@ -135,18 +137,18 @@
     <form class="py-2">
         <div class="row py-2">
             <div class="col">
-              <label for="weight" class="mr-sm-2">Weight:</label>
+              <label for="weight" class="mr-sm-2">Weight(kg):</label>
             </div>
             <div class="col">
-                <label for="height" class="mr-sm-2">Height:</label>
+                <label for="height" class="mr-sm-2">Height(cm):</label>
             </div>
           </div>
         <div class="row py-2">
           <div class="col">
-            <input type="text" class="form-control" placeholder="kg" name="wei" id = "changeWeight">
+            <input type="text" class="form-control" name="wei" id = "changeWeight" value="---">
           </div>
           <div class="col">
-            <input type="text" class="form-control" placeholder="cm" name="hei" id = "changeHeight">
+            <input type="text" class="form-control" name="hei" id = "changeHeight" value="---">
           </div>
         </div>
       </form>
@@ -157,6 +159,7 @@
 
     <form class="py-2">
         <select name="levels" class="custom-select" id = "changeLevel">
+          <!-- <option id="defaultLevel" value="---"></option> -->
           <option value="Beginner">Beginner</option>
           <option value="Intermediate">Intermediate</option>
           <option value="Expert">Expert</option>
@@ -169,6 +172,7 @@
 
     <form class="py-2">
       <select name="goals" class="custom-select" id = "changeGoal">
+        <!-- <option id="defaultGoal" value="---"></option> -->
         <option value="Gain muscles">Gain muscles</option>
         <option value="Lose weight">Lose weight</option>
         <option value="Keep healthy status">Keep healthy status</option>
