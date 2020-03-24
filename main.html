@@ -56,14 +56,37 @@
     <h2 id="SubTitle" class="text-center mt-5">"No pain no gain" - Franis</h2>
     <h3 class="text-center mt-1"></h3>
 
+    <!-- will fix this part later -->
+    <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Well Done!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src="images/achievement.png" style="width: 3em; height: 3em;">
+              <p>You're on your way to achieve your fitness goal.</p>
+            </div>
+            <div class="modal-footer">
+              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Keep Going!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
 
     <div id="buttons" class ="text-center">
         <button type="button" class="btn btn-success btn-large btn-block mt-5" id = "login"  onclick = "window.location.href = 'workout.html';">Start Exercise</button>
     
-        <button type="button" class="btn btn-warning btn-large btn-block mt-5" id = "signup" onclick = "window.location.href = 'profile_review.html';">User Profile</button>
+        <!-- <button type="button" class="btn btn-warning btn-large btn-block mt-5" id = "signup" onclick = "window.location.href = 'profile_review.html';">User Profile</button>
 
-        
-        <button type="button" class="btn btn-light btn-large btn-block mt-5" id = "signup" onclick = "window.location.href = 'result.html';" >Process Tracker</button>
+        <button type="button" class="btn btn-light btn-large btn-block mt-5" id = "signup" onclick = "window.location.href = 'result.html';" >Process Tracker</button> -->
+
+        <button type="button" class="btn btn-primary btn-large btn-block mt-5" id = "logout" onclick = "window.location.href = 'login.html';" >Log Out</button>
     </div>
 
     <div class="py-5"></div>
