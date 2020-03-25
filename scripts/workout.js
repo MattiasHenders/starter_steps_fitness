@@ -7,7 +7,6 @@ new Promise(function (resolve, reject) {
     setTimeout(() => resolve(numericals), 2000);
 
 }).then(function (numericals) {
-    console.log(numericals);
     setNumericalValues(numericals);
 
 });
@@ -192,6 +191,5 @@ function getDate(){
 
     let date = new Date(Date.now()).toLocaleString().split(',')[0];
     date = date.split("/").join("_")
-    console.log("Date is: " + date);
     return date;
 }
