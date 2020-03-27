@@ -163,6 +163,8 @@ function getFinishedWorkout(numericalArray) {
             }
         }
     }
+
+    let randomCalories = Math.floor(Math.random() * 100) + 500;
  
     let key = "workout_" + getDate();
 
@@ -175,7 +177,8 @@ function getFinishedWorkout(numericalArray) {
                 [exercises[1]]: totalWeight[1],
                 [exercises[2]]: totalWeight[2],
                 [exercises[3]]: totalDistance,
-                [exercises[4]]: totalWeight[4]
+                [exercises[4]]: totalWeight[4],
+                calories: randomCalories
             }
          })
          promise.then(function(){
