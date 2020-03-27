@@ -169,8 +169,27 @@ function getFinishedWorkout(numericalArray) {
     let key = "workout_" + getDate();
 
     firebase.auth().onAuthStateChanged(function(user){
+
+        let increment = firebase.firestore.FieldValue.increment(randomCalories);
+        let dbref = db.collection("users/").doc(user.uid);
+
+
+        dbref.update({
+            MyCalories: increment,
+            ["Total"]:{
+                benchpress: increment,
+                calories: increment,
+                deadlift: increment,
+                overheadpress: increment,
+                running: increment,
+                squat: increment
+            }
+        })
+
+
     
         var promise = db.collection("users/").doc(user.uid).update({
+
 
             [key]: {
                 [exercises[0]]: totalWeight[0],
@@ -180,9 +199,11 @@ function getFinishedWorkout(numericalArray) {
                 [exercises[4]]: totalWeight[4],
                 calories: randomCalories
             }
+
+            
          })
          promise.then(function(){
-             window.location.href="result_check.html";
+           window.location.href="result_activities.html";
          });
      });
 
