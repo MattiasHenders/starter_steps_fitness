@@ -23,8 +23,12 @@ firebase.auth().onAuthStateChanged(function(user){
             let titleY = "Y" + i;
             console.log(titleY);
             let titleX = "X" + i;
+            if (snap.data()[workoutArr[i]] == null){
+                localStorage.setItem(titleY, null)
+            } else {
             localStorage.setItem(titleY, snap.data()[workoutArr[i]]["calories"])
-            localStorage.setItem(titleX, dateArr[i].getDate());
+            }
+            localStorage.setItem(titleX, dateArr[i].getDate());localStorage.setItem(titleX, dateArr[i].getDate());
 
 
         }
