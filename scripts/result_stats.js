@@ -24,7 +24,7 @@ firebase.auth().onAuthStateChanged(function(user){
             console.log(titleY);
             let titleX = "X" + i;
             if (snap.data()[workoutArr[i]] == null){
-                localStorage.setItem(titleY, null)
+                localStorage.setItem(titleY, 0)
             } else {
             localStorage.setItem(titleY, snap.data()[workoutArr[i]]["calories"])
             }
