@@ -10,6 +10,16 @@ let workoutArr = [];
 
 const MAX = 7;
 
+new Promise(function (resolve, reject) {
+    setLocalStorage();
+    setTimeout(() => resolve(), 2000);
+
+}).then(function () {
+    renderGraph();
+});
+
+function setLocalStorage(){
+
 for (let i = 0; i < MAX; i++){
     dateArr[i] = new Date(year, month - 1, day, 0, 0, 0, 0);
     dateArr[i].setDate(d.getDate() - i);
@@ -41,6 +51,10 @@ firebase.auth().onAuthStateChanged(function(user){
     
 })
 
+}
+
+function renderGraph(){
+
 document.querySelector("#totalC").innerHTML = "Total Calories Burned Since First Day: " + localStorage.getItem("calories") + " kCal !";
 
 let xArr = [];
@@ -69,7 +83,7 @@ yArr.reverse();
             text: "Calories Burned"
         },
         axisY:{
-            minimum: 400,
+            minimum: 0,
             maximum: 700,
             title: "Calories (kCal)",
             includeZero: false
@@ -104,5 +118,5 @@ yArr.reverse();
     });
     chart1.render();
 
-    
+}
     
