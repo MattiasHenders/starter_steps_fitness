@@ -15,7 +15,12 @@ firebase.auth().onAuthStateChanged(function(user){
         document.querySelector("#userLevel").innerHTML = snap.data().Level;
 
         document.querySelector("#userGoal").innerHTML = snap.data().Goal;
+
+        if (snap.data().Sex == "Female"){
+            document.getElementById("userPic").src = "images/female.jpg";
+        } else if (snap.data().Sex == "Male"){
+            document.getElementById("userPic").src = "images/male.jpg";
+        }
     });
 
 })
-

@@ -43,6 +43,12 @@ function showDefault(){
             // document.getElementById("defaultLevel").defaultValue = snap.data().Level;
     
             // document.getElementById("defaultGoal").defaultValue = snap.data().Goal;
+
+            if (snap.data().Sex == "Female"){
+                document.getElementById("userPic").src = "images/female.jpg";
+            } else if (snap.data().Sex == "Male"){
+                document.getElementById("userPic").src = "images/male.jpg";
+            }
         });
     
     })
