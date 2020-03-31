@@ -2,9 +2,10 @@ getUserGoal();
 
 let goal = localStorage.getItem(0);
 console.log(goal);
+
 new Promise(function (resolve, reject) {
     let numericals = getNumericals(goal);
-    setTimeout(() => resolve(numericals), 2000);
+    setTimeout(() => resolve(numericals), 3000);
 
 }).then(function (numericals) {
     setNumericalValues(numericals);
@@ -13,7 +14,7 @@ new Promise(function (resolve, reject) {
 
 new Promise(function (resolve, reject) {
     let workout = getWorkout(goal);
-    setTimeout(() => resolve(workout), 2000);
+    setTimeout(() => resolve(workout), 3000);
 
 }).then(function (workout) {
 

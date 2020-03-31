@@ -1,11 +1,12 @@
 firebase.auth().onAuthStateChanged(function(user){
     console.log(user.displayName);
-    localStorage.setItem(2, user.displayName);
     document.querySelector("h3").innerHTML = "Hello, " + user.displayName + " !";
     document.getElementById("message").innerHTML = "Welcome back, " + user.displayName + "!";
 })
 
 $(document).ready(function() { $('.form-popup').modal({ show: true, }) }); 
+
+$('#popup').modal('show');
 
 // Used for setting workout before user gets there.
 getUserGoal();
@@ -19,5 +20,3 @@ function getUserGoal() {
         });
     })
 }
-
-$('#popup').modal('show');
