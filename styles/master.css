@@ -1,6 +1,4 @@
 body {
-    /* background-color: #fbe8a6;
-    color: #303c6c; */
     background-color: #ecdfc8;
     color: #303c6c;
 
@@ -14,14 +12,12 @@ body {
   }
 
 .welcome {
-    /* background-color: rgb(200, 200, 227); */
     background-color: #C41E3D;
     color: #F8F4E3;
 }
 
 /* icon bar */
 .icon-bar{
-    /* background-color: #D2FDFF; */
     background-color:#C41E3D; 
     width: 100%;
     overflow: auto;
@@ -35,18 +31,17 @@ body {
     text-align: center;
     padding: 12px 0;
     transition: all 0.3s ease;
-    /* color: #303C6C; */
     color: #F8F4E3;
     font-size: 36px;
 }
 
 p.textIcon{
-    font-size: 20px;
+    font-size: 17px;
+    font-weight: bold;
 }
 .icon-bar a:hover{
     background-color: #3C0919;
 }
 .active{
-    /* background-color: #87CEFA; */
     background-color: #3C0919;
 }

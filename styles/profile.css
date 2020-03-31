@@ -15,3 +15,23 @@ h1{
     margin-bottom: 25px;
     width: 30%;
 }
+
+#achievementp{
+    width: 4em;
+    height: 4em;
+}
+
+.modal-dialog {
+    position: absolute;
+    top: 30%;
+    right: 45px;
+    bottom: 0;
+    left: 10%;
+    z-index: 10040;
+    overflow: auto;
+    overflow-y: auto;
+  }
+
+.modal-body{
+    text-align: center;
+}
