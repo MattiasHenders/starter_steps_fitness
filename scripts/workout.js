@@ -1,7 +1,7 @@
 getUserGoal();
 
 let goal = localStorage.getItem(0);
-
+console.log(goal);
 new Promise(function (resolve, reject) {
     let numericals = getNumericals(goal);
     setTimeout(() => resolve(numericals), 2000);
@@ -24,8 +24,8 @@ new Promise(function (resolve, reject) {
 
 function getUserGoal() {
     firebase.auth().onAuthStateChanged(function (user) {
-        db.collection("users/").doc(user.uid).onSnapshot(function (snap) {
-            let userGoal = (snap.data().Goal);
+        db.collection("users/").doc(user.uid).onSnapshot(function (doc) {
+            let userGoal = (doc.data().Goal);
             localStorage.setItem(0, userGoal);
         });
     })

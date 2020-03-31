@@ -2,8 +2,8 @@ let userGoal = localStorage.getItem(0);
 
 firebase.auth().onAuthStateChanged(function(user){
     db.collection("users/").doc(user.uid).onSnapshot(
-        function(snap){
-           localStorage.setItem(0, (snap.data().Goal));
+        function(doc){
+           localStorage.setItem(0, (doc.data().Goal));
         }
     )
 });
