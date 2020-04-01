@@ -1,31 +1,47 @@
-getUserGoal();
+setWorkoutPage();
 
-let goal = localStorage.getItem(0);
-console.log(goal);
+// Gets users from firebase as an array
+function setWorkoutPage() {
+    let userGoal;
+    let workout;
+    let numericals;
 
-new Promise(function (resolve, reject) {
-    let numericals = getNumericals(goal);
-    setTimeout(() => resolve(numericals), 3000);
+    firebase.auth().onAuthStateChanged(function (user) {
+        db.collection("users").doc(user.uid)
+            .get()
+            .then(function (doc) {
+                userGoal = (doc.data().Goal);
+                localStorage.setItem(0, userGoal);
+                console.log(localStorage.getItem(0));
+            })
+            .then(function () {
+                getWorkout(userGoal);
+                workout = localStorage.getItem(2);
+            })
+            .then(function () {
+                getNumericals(userGoal);
+                numericals = localStorage.getItem(1);
+            })
+            .then(function () {
+                getWorkout(userGoal);
+                getNumericals(userGoal);
+            })
+            .then(function () {
 
-}).then(function (numericals) {
-    setNumericalValues(numericals);
+                setTimeout(function(){
+                    numericals = localStorage.getItem(1);
+                    workout = localStorage.getItem(2);
+                    setWorkout(workout);
+                    setNumericalValues(numericals);
+                } , 1000)
+            })
+    })
 
-});
-
-new Promise(function (resolve, reject) {
-    let workout = getWorkout(goal);
-    setTimeout(() => resolve(workout), 3000);
-
-}).then(function (workout) {
-
-    setWorkout(workout);
-    localStorage.setItem(1, workout);
-
-});
+}
 
 function getUserGoal() {
     firebase.auth().onAuthStateChanged(function (user) {
-        db.collection("users/").doc(user.uid).onSnapshot(function (doc) {
+        db.collection("users").doc(user.uid).onSnapshot(function (doc) {
             let userGoal = (doc.data().Goal);
             localStorage.setItem(0, userGoal);
         });
@@ -35,11 +51,18 @@ function getUserGoal() {
 function getWorkout(userGoal) {
     let name = [];
     if (userGoal == "Gain muscles") {
-        db.collection("workouts/gainMuscle/exercises").get().then(function (querySnapshot) {
-            querySnapshot.forEach(function (doc) {
-                name.push(doc.data().name);
+        db.collection("workouts/gainMuscle/exercises").get()
+            .then(function (querySnapshot) {
+                querySnapshot.forEach(function (doc) {
+                    name.push(doc.data().name);
+                })
             })
-        })
+            .then(function () {
+                localStorage.setItem(2, name);
+            })
+            .then(function () {
+                console.log(localStorage.getItem(2));
+            })
     } else if (userGoal == "Keep healthy status") {
         db.collection("workouts/keepHealthy/exercises").get().then(function (querySnapshot) {
             querySnapshot.forEach(function (doc) {
@@ -64,13 +87,18 @@ function getNumericals(userGoal) {
     let reps = [];
     let distance = [];
     if (userGoal == "Gain muscles") {
-        db.collection("workouts/gainMuscle/exercises").get().then(function (querySnapshot) {
-            querySnapshot.forEach(function (doc) {
-                reps.push(doc.data()["Rep(#)"]);
-                weight.push(doc.data()["Weight(lb)"]);
-                distance.push(doc.data()["Distance(km)"]);
+        db.collection("workouts/gainMuscle/exercises")
+            .get()
+            .then(function (querySnapshot) {
+                querySnapshot.forEach(function (doc) {
+                    reps.push(doc.data()["Rep(#)"]);
+                    weight.push(doc.data()["Weight(lb)"]);
+                    distance.push(doc.data()["Distance(km)"]);
+                })
+
+            }).then(function () {
+                localStorage.setItem(1, [reps, weight, distance]);
             })
-        })
     } else if (userGoal == "Keep healthy status") {
         db.collection("workouts/keepHealthy/exercises").get().then(function (querySnapshot) {
             querySnapshot.forEach(function (doc) {
@@ -78,6 +106,7 @@ function getNumericals(userGoal) {
                 weight.push(doc.data()["Weight(lb)"]);
                 distance.push(doc.data()["Distance(km)"]);
             })
+            localStorage.setItem(1, [reps, weight, distance]);
         })
     } else if (userGoal == "Loss weight") {
         db.collection("workouts/lossWeight/exercises").get().then(function (querySnapshot) {
@@ -90,12 +119,12 @@ function getNumericals(userGoal) {
     } else {
         console.log("Error in determining goal of user.");
     }
-
-    return [reps, weight, distance];
-
 }
 
-function setWorkout(workoutNames) {
+function setWorkout(names) {
+
+    workoutNames = names.split(",");
+
     demoID = [];
     for (let i = 0; i < workoutNames.length; i++) {
 
@@ -108,19 +137,30 @@ function setWorkout(workoutNames) {
 
 }
 
-function setNumericalValues(numericalArray) {
+function setNumericalValues(numArr) {
 
-    let reps = numericalArray[0];
-    let weight = numericalArray[1];
-    let distance = numericalArray[2];
+    let reps = [];
+    let weight = [];
+    let distance = [];
+
+    numericalArray = numArr.split(",");
+
+    for (let i = 0; i < 5; i++) {
+        reps[i] = numericalArray[i];
+        weight[i] = numericalArray[i + 5];
+        distance[i] = numericalArray[i + 10];
+    }
+
+    console.log(numericalArray);
+
 
     for (let i = 0; i < 5; i++) {
         for (let j = 0; j < 5; j++) {
-            if(weight[i] == undefined){
+            if (weight[i] == "") {
                 removeElement("weightCol" + (i + 1) + "-" + (j + 1));
                 document.getElementById("repText" + (i + 1) + "-" + (j + 1)).innerHTML = "Distance (km)";
                 document.getElementById("rep" + (i + 1) + "-" + (j + 1)).id = "distance" + (i + 1) + "-" + (j + 1);
-                if(j > 0){
+                if (j > 0) {
                     document.getElementById("distance" + (i + 1) + "-" + (j + 1)).value = 0;
                 } else {
                     document.getElementById("distance" + (i + 1) + "-" + (j + 1)).value = distance[i];
@@ -144,32 +184,37 @@ function getFinishedWorkout(numericalArray) {
     let totalDistance = 0;
     let totalWeight = [];
 
-    let exercises = localStorage.getItem(1); 
+    let exercises = localStorage.getItem(1);
+
+    if (exercises == null) {
+        window.location.href = "workout.html"
+    }
+
     exercises = exercises.split(",");
 
-    for(let k = 0; k <exercises.length; k++){
+    for (let k = 0; k < exercises.length; k++) {
         exercises[k] = exercises[k].toLowerCase();
     }
-    
+
     for (let i = 0; i < 5; i++) {
         totalWeight[i] = 0;
         for (let j = 0; j < 5; j++) {
-            if(document.getElementById("weight" + (i + 1) + "-" + (j + 1)) == null){
-                if(j == 0){
+            if (document.getElementById("weight" + (i + 1) + "-" + (j + 1)) == null) {
+                if (j == 0) {
                     totalDistance += parseFloat(document.getElementById("distance" + (i + 1) + "-" + (j + 1)).value);
                 }
             } else {
-                totalWeight[i] += (document.getElementById("weight" + (i + 1) + "-" + (j + 1)).value) *  (document.getElementById("rep" + (i + 1) + "-" + (j + 1)).value);
-                
+                totalWeight[i] += (document.getElementById("weight" + (i + 1) + "-" + (j + 1)).value) * (document.getElementById("rep" + (i + 1) + "-" + (j + 1)).value);
+
             }
         }
     }
 
     let randomCalories = Math.floor(Math.random() * 100) + 500;
- 
+
     let key = "workout_" + getDate();
 
-    firebase.auth().onAuthStateChanged(function(user){
+    firebase.auth().onAuthStateChanged(function (user) {
 
         let increment = firebase.firestore.FieldValue.increment(randomCalories);
         let dbref = db.collection("users/").doc(user.uid);
@@ -177,7 +222,7 @@ function getFinishedWorkout(numericalArray) {
 
         dbref.update({
             MyCalories: increment,
-            ["Total"]:{
+            ["Total"]: {
                 benchpress: increment,
                 calories: increment,
                 deadlift: increment,
@@ -188,7 +233,7 @@ function getFinishedWorkout(numericalArray) {
         })
 
 
-    
+
         var promise = db.collection("users/").doc(user.uid).update({
 
 
@@ -201,18 +246,18 @@ function getFinishedWorkout(numericalArray) {
                 calories: randomCalories
             }
 
-            
-         })
-         promise.then(function(){
-           window.location.href="result_activities.html";
-         });
-     });
+
+        })
+        promise.then(function () {
+            window.location.href = "result_activities.html";
+        });
+    });
 
 }
 
 document.getElementById("submitButton").onclick = getFinishedWorkout;
 
-function getDate(){
+function getDate() {
 
     let date = new Date(Date.now()).toLocaleString().split(',')[0];
     date = date.split("/").join("_")
