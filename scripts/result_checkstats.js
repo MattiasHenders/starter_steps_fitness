@@ -3,6 +3,11 @@ let day = localStorage.getItem("day");
 let month = localStorage.getItem("month");
 let year = localStorage.getItem("year");
 
+let date = month + "/" + day + "/" + year;
+
+document.querySelector("#complete").innerHTML = "The week ending on " + date;
+
+
 
 let d = new Date(year, month - 1, day, 0, 0, 0, 0);
 let dateArr = new Array();
