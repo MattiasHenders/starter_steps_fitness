@@ -33,125 +33,95 @@
     <div class="text-center" >
         <img id="userPic" src="images/usericon.jpg" class="rounded-circle img-fluid" alt="Profile picture" >
       </div>
-<div class="m-lg-5 py-2">
-    <div >
-        <p >User name:</p>
-    </div>
-   
-    <div class="card py-2">
-        <div class="card-body" id = "userName">
-          
+    <div class="m-lg-5 py-2">
+        <div >
+            <p >User name:</p>
         </div>
-    </div>
-
-    <div class="py-2">
-        <p>Age:</p>
-    </div>
-
-    <div class="card py-2">
-        <div class="card-body" id = "userAge">
-          
-        </div>
-    </div>
-
-    <div class="py-2">
-        <p>Sex</p>
-    </div>
-
-    <div class="card py-2">
-        <div class="card-body" id = "userSex">
-          
-        </div>
-    </div>
-
-    <form class="py-2">
-        <div class="row py-2">
-            <div class="col">
-              <label for="weight" class="mr-sm-2">Weight:</label>
+    
+        <div class="card py-2">
+            <div class="card-body" id = "userName">
+            
             </div>
-            <div class="col">
-                <label for="height" class="mr-sm-2">Height:</label>
+        </div>
+
+        <div class="py-2">
+            <p>Age:</p>
+        </div>
+
+        <div class="card py-2">
+            <div class="card-body" id = "userAge">
+            
             </div>
-          </div>
-        <div class="row py-2">
-          <div class="col">
-            <div class="card">
-                <div class="card-body" id = "userWeight">
-                  
+        </div>
+
+        <div class="py-2">
+            <p>Sex</p>
+        </div>
+
+        <div class="card py-2">
+            <div class="card-body" id = "userSex">
+            
+            </div>
+        </div>
+
+        <form class="py-2">
+            <div class="row py-2">
+                <div class="col">
+                <label for="weight" class="mr-sm-2">Weight:</label>
+                </div>
+                <div class="col">
+                    <label for="height" class="mr-sm-2">Height:</label>
                 </div>
             </div>
+
+            <div class="row py-2">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body" id = "userWeight"></div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-body" id = "userHeight"></div>
+                </div>
+            </div>
+            </div>
+        </form>
         
-          </div>
-          <div class="col">
-            <div class="card">
-                <div class="card-body" id = "userHeight">
-                  
-                </div>
-            </div>
-          </div>
-        </div>
-      </form>
-    <!-- <div>
-        <p>Weight:</p>
-    </div>
 
-    <div class="card">
-        <div class="card-body">
-          57 kg
+        <div class="py-2">
+            <p>Level:</p>
+        </div>
+
+        <div class="card py-2">
+            <div class="card-body" id = "userLevel"></div>
+        </div>
+
+        <div class="py-2">
+            <p>Fitness Goal:</p>
+        </div>
+
+        <div class="card py-2">
+            <div class="card-body" id = "userGoal"></div>
         </div>
     </div>
 
-    <div>
-        <p>Height:</p>
+    <div class="text-center">
+        <button type="button" onclick="window.location.href = 'profile_change.html';" class="btn btn-primary btn-lg" id="edit">Edit</button>
     </div>
 
-    <div class="card">
-        <div class="card-body">
-          170 cm
-        </div>
-    </div> -->
-
-    <div class="py-2">
-        <p>Level:</p>
+    <!----------------------------------------------->
+    <!--                 Icon bars                 -->
+    <!----------------------------------------------->
+    <div class="py-5"></div>
+        <div class="icon-bar">
+        <a href="result.html"><i class="fas fa-chart-line"></br><p class="textIcon">Progress</p></i></a>
+        <a href="workout.html"><i class="fas fa-dumbbell"></br><p class="textIcon">Workout</p></i></a>  
+        <a href="main.html"><i class="fas fa-home"></br><p class="textIcon">Home</p></i></a>
+        <a href="profile_schedule.html"><i class="far fa-calendar-alt"></br><p class="textIcon">Schedule</p></i></a> 
+        <a class="active" href="profile_review.html"><i class="fas fa-user"></br><p class="textIcon">Profile</p></i></a>
     </div>
-
-    <div class="card py-2">
-        <div class="card-body" id = "userLevel">
-          
-        </div>
-    </div>
-
-    <div class="py-2">
-        <p>Fitness Goal:</p>
-    </div>
-
-    <div class="card py-2">
-        <div class="card-body" id = "userGoal">
-          
-        </div>
-    </div>
-</div>
-<div class="text-center">
-    <button type="button" onclick="window.location.href = 'profile_change.html';" class="btn btn-primary btn-lg" id="edit">Edit</button>
-</div>
-
-<!-- <div class="text-center py-2">
-  <button type="button" onclick="window.location.href='profile_schedule.html';" class = "btn btn-primary btn-lg" >Workout Schedule</button>
-</div>
-
-<div id="buttons" class ="text-center bottombuttons mt-0">
-
-  <button type="button" class="btn btn-secondary btn-large btn-block" id = "home" onclick = "window.location.href = 'main.html';">Home</button>
-</div> -->
-
-<div class="py-5"></div>
-    <div class="icon-bar">
-      <a href="result.html"><i class="fas fa-chart-line"></br><p class="textIcon">Progress</p></i></a>
-      <a href="workout.html"><i class="fas fa-dumbbell"></br><p class="textIcon">Workout</p></i></a>  
-      <a href="main.html"><i class="fas fa-home"></br><p class="textIcon">Home</p></i></a>
-      <a href="profile_schedule.html"><i class="far fa-calendar-alt"></br><p class="textIcon">Schedule</p></i></a> 
-      <a class="active" href="profile_review.html"><i class="fas fa-user"></br><p class="textIcon">Profile</p></i></a>
-  </div>
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, other API's    -->

@@ -1,5 +1,9 @@
 let userGoal = localStorage.getItem(0);
 
+/**
+ * Gets user goal from firebase.
+ * @param doc 
+ */
 firebase.auth().onAuthStateChanged(function(user){
     db.collection("users/").doc(user.uid).onSnapshot(
         function(doc){
@@ -8,6 +12,10 @@ firebase.auth().onAuthStateChanged(function(user){
     )
 });
 
+/**
+ * Retrieves and reads data from firebase to display the schedule based on user goal.
+ * @param snap
+ */
 function showSchedule(){
     if (userGoal == "Gain muscles"){
         db.collection("workouts/gainMuscle/exercises").doc("benchpress").onSnapshot(
@@ -103,4 +111,7 @@ function showSchedule(){
     }
 }
 
+/**
+ * Invokes the showSchedule() function.
+ */
 showSchedule();
