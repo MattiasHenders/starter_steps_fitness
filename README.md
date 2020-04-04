@@ -52,24 +52,24 @@ It has the following subfolders:
 ├── scripts                  			# Folder for scripts
 	/firebase-starter-steps-fitness.js	# Firebase script for the apps database
 	/iconbar.js                  		# The script for the sticky icon bar at the bottom of each page
-	/main.js                  			# The script for the two main pages
+	/main.js                  		# The script for the two main pages
 	/profile.js                  		# The script for the profile page
-	/profile_change.js                  # The script for the page to change your profile
+	/profile_change.js                  	# The script for the page to change your profile
 	/result.js                  		# The script for the results page
 	/result_check.js                  	# The script to enter a day for checking results
 	/result_checkactivities.js          # The script for checking weeks activities
-	/result_checkstats.js               # The script for checking a certain weeks graph
-	/result_stats.js                  	# The script for checking the weeks graph
+	/result_checkstats.js               	# The script for checking a certain weeks graph
+	/result_stats.js                  		# The script for checking the weeks graph
 	/schedule.js                  		# The script for the workout schedule page
 	/workout.js                  		# The script for the workout page
 	
-├── styles                   # Folder for styles, css
+├── styles                   				# Folder for styles, css
 	/login.css				 # Styles for login page
 	/main.css				 # Styles for main pages
 	/master.css				 # Styles for all pages
-	/profile.css			 # Styles for user profile page
+	/profile.css			 		# Styles for user profile page
 	/result.css				 # Styles for results page
-	/workout.css			 # Styles for the workout page
+	/workout.css			 		# Styles for the workout page
 
 
 ```
