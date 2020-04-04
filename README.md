@@ -27,20 +27,20 @@ Content of the project folder:
 
 ```
  Top level of project folder: 
-├── .gitignore          	    # Git ignore file
-├── index.html             	    # landing HTML file, user must login or sign up to use app
-├── login.html               	# login HTML file, contains logic for user authentication
-├── main.html                	# after logged in, you can start your workout, check your schedule, or edit profile
-├── main2.html               	# after logged in, you can do most normal function but also get an encouraging message
-├── profile_change.html      	# page to edit your own profile preferences: age, weight, height, sex, fitness, and goals
-├── profile_review.html	 	 	# page to review your own profile preferences: age, weight, height, sex, fitness, and goals
-├── profile_schedule.html	 	# page to review your workout schedule
+├── .gitignore          	    		# Git ignore file
+├── index.html             	   		# landing HTML file, user must login or sign up to use app
+├── login.html               			# login HTML file, contains logic for user authentication
+├── main.html                			# after logged in, you can start your workout, check your schedule, or edit profile
+├── main2.html               			# after logged in, you can do most normal function but also get an encouraging message
+├── profile_change.html      			# page to edit your own profile preferences: age, weight/height, sex, fitness, and goals
+├── profile_review.html	 	 		# page to review your own profile: age, weight, height, sex, fitness, and goals
+├── profile_schedule.html	 		# page to review your workout schedule
 ├── result.html	 			 	# page to review your completed workout for the day
-├── result_activities.html	 	# page to review your completed workout for the day
-├── result_check.html	 	 	# page to enter a day to see the workout for that specific day
-├── result_checkactivities.html # page to review your completed workout for the specific entered day
-├── result_checkstats.html 		# page to review your progress graph for the specific entered week
-├── result_stats.html 			# page to view the graph for the week
+├── result_activities.html	 		# page to review your completed workout for the day
+├── result_check.html	 	 		# page to enter a day to see the workout for that specific day
+├── result_checkactivities.html 		# page to review your completed workout for the specific entered day
+├── result_checkstats.html 			# page to review your progress graph for the specific entered week
+├── result_stats.html 				# page to view the graph for the week
 ├── workout.html	 			# page to complete the workout
 ├── .DS_Store				 	# for Mac users
 └── README.md
@@ -64,11 +64,11 @@ It has the following subfolders:
 	/workout.js                  		# The script for the workout page
 	
 ├── styles                   			# Folder for styles, css
-	/login.css				 # Styles for login page
-	/main.css				 # Styles for main pages
-	/master.css				 # Styles for all pages
+	/login.css				# Styles for login page
+	/main.css				# Styles for main pages
+	/master.css				# Styles for all pages
 	/profile.css			 	# Styles for user profile page
-	/result.css				 # Styles for results page
+	/result.css				# Styles for results page
 	/workout.css			 	# Styles for the workout page
 
 
