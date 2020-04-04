@@ -1,19 +1,26 @@
-#login {
+/* #login {
     position: absolute;
-    top: 40vh;
+    
     left:15%;
     width: 70%;
     font-size: 2em;
+    
 }
 
 #signup {
     position: absolute;
-    top: 60vh;
+    
     left:15%;
     width: 70%;
     font-size: 2em;
-}
+    
+} */
 
 #buttons{
     text-align: center;
+}
+
+#signup, #login{
+    width: 70%;
+    font-size: 2em;
 }
