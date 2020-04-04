@@ -12,6 +12,8 @@ This small project demonstrates:
 * tracking of a workouts completed by the user
 * display of a user's history of completed workouts
 * use of navbar in boostrap stickied to the bottom
+* customized workouts based on the users fitness goals
+* review of weeks workouts in a graph format
 
 	
 ## Technologies
