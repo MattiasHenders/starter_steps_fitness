@@ -243,7 +243,7 @@ function getFinishedWorkout() {
     let totalDistance = 0;
     let totalWeight = [];
 
-    let exercises = localStorage.getItem(1);
+    let exercises = localStorage.getItem(2);
 
     exercises = exercises.split(",");
 
@@ -277,7 +277,6 @@ function getFinishedWorkout() {
         // Increases amount of random calories
         let increment = firebase.firestore.FieldValue.increment(randomCalories);
         let dbref = db.collection("users/").doc(user.uid);
-
 
         dbref.update({
             MyCalories: increment,
