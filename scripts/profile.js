@@ -1,3 +1,6 @@
+/**
+ * Retrieves and reads data from firebase and display it on html pages.
+ */
 firebase.auth().onAuthStateChanged(function(user){
     
     document.querySelector("#userName").innerHTML = user.displayName;

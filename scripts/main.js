@@ -1,9 +1,12 @@
+/**
+ * Get user name from firebase and display it.
+ */
 firebase.auth().onAuthStateChanged(function(user){
     console.log(user.displayName);
     document.querySelector("h3").innerHTML = "Hello, " + user.displayName + " !";
     document.getElementById("message").innerHTML = "Welcome back, " + user.displayName + "!";
 })
-
+//show the popup message.
 $(document).ready(function() { $('.form-popup').modal({ show: true, }) }); 
 
 $('#popup').modal('show');

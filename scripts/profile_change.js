@@ -1,13 +1,14 @@
+/**
+ * Get userName from firebase and display userName on  the user name card.
+ */
 firebase.auth().onAuthStateChanged(function(user){
-    
     document.querySelector("#userName").innerHTML = user.displayName;
 })
 
-document.querySelector("#save").onclick = savedata;
-
+/**
+ * Update new changes of data to firebase.
+ */
 function savedata(){
-
-
     firebase.auth().onAuthStateChanged(function(user){
     
        var promise = db.collection("users/").doc(user.uid).update({
@@ -27,22 +28,17 @@ function savedata(){
 
 }
 
+/**
+ * Set default value for height and weight so that user don't need to type again if they don't want to change.
+ */
 function showDefault(){
     firebase.auth().onAuthStateChanged(function(user){
     
         db.collection("users/").doc(user.uid).onSnapshot(function(snap){
     
-            // document.getElementById("defaultAge").selected = snap.data().Age;
-    
-            // document.getElementById("defaultSex").selected = snap.data().Sex;
-    
             document.getElementById("changeWeight").defaultValue = snap.data().Weight;
             
             document.getElementById("changeHeight").defaultValue = snap.data().Height;
-    
-            // document.getElementById("defaultLevel").defaultValue = snap.data().Level;
-    
-            // document.getElementById("defaultGoal").defaultValue = snap.data().Goal;
 
             if (snap.data().Sex == "Female"){
                 document.getElementById("userPic").src = "images/female.jpg";
@@ -54,4 +50,8 @@ function showDefault(){
     })
 }
 
+/**
+ * Invokes functions.
+ */
+document.querySelector("#save").onclick = savedata;
 showDefault();
