@@ -77,10 +77,10 @@ It has the following subfolders:
 
 ## Libraries Used
 Reference section for libraries used.
-*canvas.js  https://canvasjs.com/
+* canvas.js  https://canvasjs.com/
 
 ├── result_checkstats.js
 
-*jqueryui.com  https://jqueryui.com/
+* jqueryui.com  https://jqueryui.com/
 
 ├── result_stats.js 
