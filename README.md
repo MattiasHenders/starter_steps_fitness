@@ -58,7 +58,7 @@ It has the following subfolders:
 	/main.js                  		# The script for the two main pages
 	/profile.js                  		# The script for the profile page
 	/profile_change.js                  	# The script for the page to change your profile
-	/result.js                  		# The script for the results page
+	/result_activities.js                  		# The script for the results activities page
 	/result_check.js                  	# The script to enter a day for checking results
 	/result_checkactivities.js          	# The script for checking weeks activities
 	/result_checkstats.js               	# The script for checking a certain weeks graph
@@ -79,8 +79,8 @@ It has the following subfolders:
 Reference section for libraries used.
 * canvas.js  https://canvasjs.com/
 
-├── result_checkstats.js
+├── result_checkstats.js, result_stats.js, result_checkstats.html, result_stats.html
 
 * jqueryui.com  https://jqueryui.com/
 
-├── result_stats.js 
+├── result_check.js, result_check.html

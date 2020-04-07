@@ -227,7 +227,7 @@ function getFinishedWorkout() {
 /**
  * Sets the data into firebase for the workout.
  * 
- * @param {*} exercises excersises
+ * @param {*} exercises exercises
  * @param {*} totalWeight total Weight lifted
  * @param {*} totalDistance total Distance ran
  * @param {*} randomCalories calories for database
@@ -235,33 +235,62 @@ function getFinishedWorkout() {
 function setData(exercises, totalWeight, totalDistance, randomCalories) {
     let key = "workout_" + getDate();
     firebase.auth().onAuthStateChanged(function (user) {
+        // Increment calories burned in database
         let increment = firebase.firestore.FieldValue.increment(randomCalories);
         let dbref = db.collection("users/").doc(user.uid);
         dbref.update({
             MyCalories: increment,
-            ["Total"]: {
-                benchpress: increment,
-                calories: increment,
-                deadlift: increment,
-                overheadpress: increment,
-                running: increment,
-                squat: increment
+        })
+        // Update workout info in database.
+        dbref.get().then(function (snap) {
+            var promise;
+            let obj = snap.data()[key];
+            update(dbref, obj, promise, key, exercises, totalWeight, totalDistance, randomCalories);
+
+
+        })
+
+    })
+
+}
+/**
+ * Create a workout map in database for today if it doesn't exist. If it does, increment it with new exercises done.
+ * @param {*} dbref a database reference
+ * @param {*} obj today's workout map
+ * @param {*} promise a promise function to be ran first
+ * @param {*} key title of today's workout map
+ * @param {*} exercises exercises
+ * @param {*} totalWeight total weight lifted
+ * @param {*} totalDistance total distance ran
+ * @param {*} randomCalories calories for database
+ */
+function update(dbref, obj, promise, key, exercises, totalWeight, totalDistance, randomCalories) {
+    if (obj != null) {
+        promise = dbref.update({
+            [key]: {
+                [exercises[0]]: obj.benchpress + totalWeight[0],
+                [exercises[1]]: obj.deadlift + totalWeight[1],
+                [exercises[2]]: obj.overheadpress + totalWeight[2],
+                [exercises[3]]: obj.running + totalDistance,
+                [exercises[4]]: obj.squat + totalWeight[4],
+                calories: obj.calories + randomCalories
             }
         })
-        var promise = db.collection("users/").doc(user.uid).update({
+    } else {
+        promise = dbref.update({
             [key]: {
                 [exercises[0]]: totalWeight[0],
                 [exercises[1]]: totalWeight[1],
-                [caexercises[2]]: totalWeight[2],
+                [exercises[2]]: totalWeight[2],
                 [exercises[3]]: totalDistance,
                 [exercises[4]]: totalWeight[4],
                 calories: randomCalories
             }
         })
-        promise.then(function () {
-            window.location.href = "result_activities.html";
-        });
-    });
+    }
+    promise.then(function () {
+        window.location.href = "result_activities.html";
+    })
 }
 
 // The function when a user is completed their workout
