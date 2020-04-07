@@ -2,6 +2,7 @@
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Contents](#content)
+* [Libraries Used](#libraries-used)
 
 ## General Info
 This browser based web application lets users sign up, set fitness goals, and workout with guided instructions and weights given!
@@ -72,7 +73,14 @@ It has the following subfolders:
 	/profile.css			 	# Styles for user profile page
 	/result.css				# Styles for results page
 	/workout.css			 	# Styles for the workout page
-
-
 ```
 
+## Libraries Used
+Reference section for libraries used.
+* canvas.js  https://canvasjs.com/
+
+├── result_checkstats.js
+
+* jqueryui.com  https://jqueryui.com/
+
+├── result_stats.js 
