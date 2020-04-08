@@ -22,6 +22,9 @@ function check() {
         month = month.substring(1);
     }
     let day = dateArr[1];
+    if (day.startsWith("0")){
+        day = day.substring(1);
+    }
     let year = dateArr[2];
     localStorage.setItem("day", day);
     localStorage.setItem("month", month);
