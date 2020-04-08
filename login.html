@@ -51,7 +51,6 @@
     <!----------------------------------------------->
     <!-- JS files: Your own JavaScripts go here    -->
     <!----------------------------------------------->
-    <script src="scripts/script.js"></script>
     <script>
         // This snippet goes at the JS section at the end of the body tag in "login.html"
         // After firebase libraries via CDN are sourced
@@ -84,7 +83,15 @@
                     if (authResult.additionalUserInfo.isNewUser) {
                         db.collection("users").doc(user.uid).set({
                                 name: user.displayName,
-                                email: user.email
+                                email: user.email,
+                                MyCalories: 0,
+                                Age: 0,
+                                Height: 0,
+                                Weight: 0,
+                                Sex: "NA",
+                                Goal: "NA",
+                                Level: "NA",
+                                
                             }).then(function () {
                                 console.log("New user added to firestore");
                                 window.location.assign("main2.html");
