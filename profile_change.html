@@ -1,228 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Starter Steps Fitness</title>
-    <meta name="ssf profile page" content="user profile">
-    <meta name="author" content="Group 30">
-    <link rel = "shortcut icon" href = "images/icon.png">
 
-    <!----------------------------------------------->
-    <!--  Meta tag for rendering on mobile devices -->
-    <!----------------------------------------------->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <!----------------------------------------------->
-    <!-- CSS: Bootstrap, Firebase, other API -->
-    <!----------------------------------------------->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-    <link type="text/css" rel="stylesheet" href="styles/master.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-    <!------------------------>
-    <!-- Your own CSS files -->
-    <!------------------------>
-    <link rel="stylesheet" href="styles/profile.css">
+<head>
+  <meta charset="utf-8">
+  <title>Starter Steps Fitness</title>
+  <meta name="ssf profile page" content="user profile">
+  <meta name="author" content="Group 30">
+  <link rel="shortcut icon" href="images/icon.png">
+
+  <!----------------------------------------------->
+  <!--  Meta tag for rendering on mobile devices -->
+  <!----------------------------------------------->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!----------------------------------------------->
+  <!-- CSS: Bootstrap, Firebase, other API -->
+  <!----------------------------------------------->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+  <link type="text/css" rel="stylesheet" href="styles/master.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!------------------------>
+  <!-- Your own CSS files -->
+  <!------------------------>
+  <link rel="stylesheet" href="styles/profile.css">
 
 </head>
+
 <body>
-    <!------------------->
-    <!--  HTML Section -->
-    <!------------------->
-    <h1 id="Title" class = "text-center welcome">User Profile</h1>
-    <div class="text-center" >
-        <img id="userPic" src="images/usericon.jpg" class="rounded-circle img-fluid" alt="Profile picture" >
+  <!------------------->
+  <!--  HTML Section -->
+  <!------------------->
+
+  <!-- Header -->
+  <h1 id="Title" class="text-center welcome">User Profile</h1>
+  <div class="text-center">
+    <img id="userPic" src="images/usericon.jpg" class="rounded-circle img-fluid" alt="Profile picture">
+  </div>
+
+  <div class="container">
+
+    <!----------------------------------------------->
+    <!--                  User Name                -->
+    <!----------------------------------------------->
+    <div>
+      <p>User name:</p>
     </div>
 
-    <div class="container">
-    
-        <!----------------------------------------------->
-        <!--                  User Name                -->
-        <!----------------------------------------------->
-        <div>
-            <p>User name:</p>
-        </div>
-      
-        <div class="card">
-            <div class="card-body" id = "userName"></div>
-        </div>
-
-        <!----------------------------------------------->
-        <!--                    Age                    -->
-        <!----------------------------------------------->
-        <div class="py-2">
-            <p class="pt-2">Age:</p>
-        </div>
-
-        <form class="py-2">
-            <select name="ages" class="custom-select" id = "changeAge">
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-              <option value="13">13</option>
-              <option value="14">14</option>
-              <option value="15">15</option>
-              <option value="16">16</option>
-              <option value="17">17</option>
-              <option value="18">18</option>
-              <option value="19">19</option>
-              
-              <option value="20">20</option>
-              <option value="21">21</option>
-              <option value="22">22</option>
-              <option value="23">23</option>
-              <option value="24">24</option>
-              <option value="25">25</option>
-              <option value="26">26</option>
-              <option value="27">27</option>
-              <option value="28">28</option>
-              <option value="29">29</option>
-
-              <option value="30">30</option>
-              <option value="31">31</option>
-              <option value="32">32</option>
-              <option value="33">33</option>
-              <option value="34">34</option>
-              <option value="35">35</option>
-              <option value="36">36</option>
-              <option value="37">37</option>
-              <option value="38">38</option>
-              <option value="39">39</option>
-
-              <option value="40">40</option>
-              <option value="41">41</option>
-              <option value="42">42</option>
-              <option value="43">43</option>
-              <option value="44">44</option>
-              <option value="45">45</option>
-              <option value="46">46</option>
-              <option value="47">47</option>
-              <option value="48">48</option>
-              <option value="49">49</option>
-
-              <option value="50">50</option>
-              <option value="51">51</option>
-              <option value="52">52</option>
-              <option value="53">53</option>
-              <option value="54">54</option>
-              <option value="55">55</option>
-              <option value="56">56</option>
-              <option value="57">57</option>
-              <option value="58">58</option>
-              <option value="59">59</option>
-
-              <option value="60">60</option>
-              <option value="61">61</option>
-              <option value="62">62</option>
-              <option value="63">63</option>
-              <option value="64">64</option>
-              <option value="65">65</option>
-            </select>
-        </form>
-
-        <!----------------------------------------------->
-        <!--                    Sex                    -->
-        <!----------------------------------------------->
-        <div class="py-2">
-            <p>Sex:</p>
-        </div>
-
-        <form class="py-2">
-            <select name="sex" class="custom-select" id = "changeSex">
-              <option value="Female">Female</option>
-              <option value="Male">Male</option>
-            </select>
-        </form>
-
-        <!----------------------------------------------->
-        <!--              Weight & Height              -->
-        <!----------------------------------------------->
-        <form class="py-2">
-            <div class="row py-2">
-                <div class="col">
-                  <label for="weight" class="mr-sm-2">Weight(kg):</label>
-                </div>
-
-                <div class="col">
-                    <label for="height" class="mr-sm-2">Height(cm):</label>
-                </div>
-            </div>
-
-            <div class="row py-2">
-              <div class="col">
-                <input type="text" class="form-control" name="wei" id = "changeWeight" value="---">
-              </div>
-
-              <div class="col">
-                <input type="text" class="form-control" name="hei" id = "changeHeight" value="---">
-              </div>
-            </div>
-        </form>
-        
-        <!----------------------------------------------->
-        <!--                   Level                   -->
-        <!----------------------------------------------->
-        <div class="py-2">
-            <p>Level:</p>
-        </div>
-
-        <form class="py-2">
-            <select name="levels" class="custom-select" id = "changeLevel">
-              <option value="Beginner">Beginner</option>
-              <option value="Intermediate">Intermediate</option>
-              <option value="Expert">Expert</option>
-            </select>
-        </form>
-        
-        <!----------------------------------------------->
-        <!--                Fitness Goal               -->
-        <!----------------------------------------------->
-        <div class="py-2">
-            <p>Fitness Goal:</p>
-        </div>
-
-        <form class="py-2">
-          <select name="goals" class="custom-select" id = "changeGoal">
-            <option value="Gain muscles">Gain muscles</option>
-            <option value="Lose weight">Lose weight</option>
-            <option value="Keep healthy status">Keep healthy status</option>
-          </select>
-        </form>
-    </div>
-    
-    <div class="text-center py-3">
-        <button type="submit" class="btn btn-primary btn-lg" id = "save">Save</button>
+    <div class="card">
+      <div class="card-body" id="userName"></div>
     </div>
 
     <!----------------------------------------------->
-    <!--                 Icon bars                 -->
+    <!--                    Age                    -->
     <!----------------------------------------------->
-    <div class="py-5"></div>
-    <div class="icon-bar">
-      <a href="result.html"><i class="fas fa-chart-line"></br><p class="textIcon">Progress</p></i></a>
-      <a href="workout.html"><i class="fas fa-dumbbell"></br><p class="textIcon">Workout</p></i></a>  
-      <a href="main.html"><i class="fas fa-home"></br><p class="textIcon">Home</p></i></a> 
-      <a href="profile_schedule.html"><i class="far fa-calendar-alt"></br><p class="textIcon">Schedule</p></i></a> 
-      <a class="active" href="profile_review.html"><i class="fas fa-user"></br><p class="textIcon">Profile</p></i></a>
+    <div class="py-2">
+      <p class="pt-2">Age:</p>
     </div>
 
-    <!----------------------------------------------->
-    <!-- JS: Boostrap, Firebase, other API's    -->
-    <!----------------------------------------------->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <form class="py-2">
+      <select name="ages" class="custom-select" id="changeAge">
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
 
-    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
-    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-    <script src="scripts/firebase-starter-steps-fitness.js"> </script>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+
+        <option value="30">30</option>
+        <option value="31">31</option>
+        <option value="32">32</option>
+        <option value="33">33</option>
+        <option value="34">34</option>
+        <option value="35">35</option>
+        <option value="36">36</option>
+        <option value="37">37</option>
+        <option value="38">38</option>
+        <option value="39">39</option>
+
+        <option value="40">40</option>
+        <option value="41">41</option>
+        <option value="42">42</option>
+        <option value="43">43</option>
+        <option value="44">44</option>
+        <option value="45">45</option>
+        <option value="46">46</option>
+        <option value="47">47</option>
+        <option value="48">48</option>
+        <option value="49">49</option>
+
+        <option value="50">50</option>
+        <option value="51">51</option>
+        <option value="52">52</option>
+        <option value="53">53</option>
+        <option value="54">54</option>
+        <option value="55">55</option>
+        <option value="56">56</option>
+        <option value="57">57</option>
+        <option value="58">58</option>
+        <option value="59">59</option>
+
+        <option value="60">60</option>
+        <option value="61">61</option>
+        <option value="62">62</option>
+        <option value="63">63</option>
+        <option value="64">64</option>
+        <option value="65">65</option>
+      </select>
+    </form>
 
     <!----------------------------------------------->
-    <!-- JS files: Your own JavaScripts go here    -->
+    <!--                    Sex                    -->
     <!----------------------------------------------->
-    <script src="scripts/iconbar.js"></script>
-    <script src="scripts/profile_change.js"></script>
+    <div class="py-2">
+      <p>Sex:</p>
+    </div>
+
+    <form class="py-2">
+      <select name="sex" class="custom-select" id="changeSex">
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
+      </select>
+    </form>
+
+    <!----------------------------------------------->
+    <!--              Weight & Height              -->
+    <!----------------------------------------------->
+    <form class="py-2">
+      <div class="row py-2">
+        <div class="col">
+          <label for="weight" class="mr-sm-2">Weight(kg):</label>
+        </div>
+
+        <div class="col">
+          <label for="height" class="mr-sm-2">Height(cm):</label>
+        </div>
+      </div>
+
+      <div class="row py-2">
+        <div class="col">
+          <input type="text" class="form-control" name="wei" id="changeWeight" value="---">
+        </div>
+
+        <div class="col">
+          <input type="text" class="form-control" name="hei" id="changeHeight" value="---">
+        </div>
+      </div>
+    </form>
+
+    <!----------------------------------------------->
+    <!--                   Level                   -->
+    <!----------------------------------------------->
+    <div class="py-2">
+      <p>Level:</p>
+    </div>
+
+    <form class="py-2">
+      <select name="levels" class="custom-select" id="changeLevel">
+        <option value="Beginner">Beginner</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </form>
+
+    <!----------------------------------------------->
+    <!--                Fitness Goal               -->
+    <!----------------------------------------------->
+    <div class="py-2">
+      <p>Fitness Goal:</p>
+    </div>
+
+    <form class="py-2">
+      <select name="goals" class="custom-select" id="changeGoal">
+        <option value="Gain muscles">Gain muscles</option>
+        <option value="Lose weight">Lose weight</option>
+        <option value="Keep healthy status">Keep healthy status</option>
+      </select>
+    </form>
+  </div>
+
+  <!----------------------------------------------->
+  <!--                Save Button                -->
+  <!----------------------------------------------->
+  <div class="text-center py-3">
+    <button type="submit" class="btn btn-primary btn-lg" id="save">Save</button>
+  </div>
+
+  <!----------------------------------------------->
+  <!--                 Icon bars                 -->
+  <!----------------------------------------------->
+  <div class="py-5"></div>
+  <div class="icon-bar">
+    <a href="result.html"><i class="fas fa-chart-line"></br>
+        <p class="textIcon">Progress</p>
+      </i></a>
+    <a href="workout.html"><i class="fas fa-dumbbell"></br>
+        <p class="textIcon">Workout</p>
+      </i></a>
+    <a href="main.html"><i class="fas fa-home"></br>
+        <p class="textIcon">Home</p>
+      </i></a>
+    <a href="profile_schedule.html"><i class="far fa-calendar-alt"></br>
+        <p class="textIcon">Schedule</p>
+      </i></a>
+    <a class="active" href="profile_review.html"><i class="fas fa-user"></br>
+        <p class="textIcon">Profile</p>
+      </i></a>
+  </div>
+
+  <!----------------------------------------------->
+  <!-- JS: Boostrap, Firebase, other API's    -->
+  <!----------------------------------------------->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+
+  <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+  <script src="scripts/firebase-starter-steps-fitness.js"> </script>
+
+  <!----------------------------------------------->
+  <!-- JS files: Your own JavaScripts go here    -->
+  <!----------------------------------------------->
+  <script src="scripts/iconbar.js"></script>
+  <script src="scripts/profile_change.js"></script>
 </body>
-</html>                            
+
+</html>

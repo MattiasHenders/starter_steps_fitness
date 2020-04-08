@@ -1,7 +1,7 @@
 /**
  * Get user name from firebase and display it.
  */
-firebase.auth().onAuthStateChanged(function(user){
+firebase.auth().onAuthStateChanged(function (user) {
     console.log(user.displayName);
     document.querySelector("h3").innerHTML = "Hello, " + user.displayName + " !";
     document.getElementById("message").innerHTML = "Welcome back, " + user.displayName + "!";
@@ -22,18 +22,22 @@ function getUserGoal() {
 }
 
 //show the popup message.
-function popupMessage(){
+function popupMessage() {
     firebase.auth().onAuthStateChanged(function (user) {
         db.collection("users/").doc(user.uid).onSnapshot(function (doc) {
-            $(document).ready(function() { $('.form-popup').modal({ show: true, }) }); 
-        if (doc.data().Goal == "Gain muscles" || doc.data().Goal == "Keep healthy status" || doc.data().Goal == "Lose weight"){
-            $('#popup').modal('show');
-        } else {
-            $('#popup2').modal('show');
-        }
+            $(document).ready(function () {
+                $('.form-popup').modal({
+                    show: true,
+                })
+            });
+            if (doc.data().Goal == "Gain muscles" || doc.data().Goal == "Keep healthy status" || doc.data().Goal == "Lose weight") {
+                $('#popup').modal('show');
+            } else {
+                $('#popup2').modal('show');
+            }
         });
     })
-    
 }
 
+//Invoke the popupMessage()
 popupMessage();
