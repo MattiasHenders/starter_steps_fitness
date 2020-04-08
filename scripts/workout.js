@@ -233,7 +233,8 @@ function getFinishedWorkout() {
  * @param {*} randomCalories calories for database
  */
 function setData(exercises, totalWeight, totalDistance, randomCalories) {
-    let key = "workout_" + getDate();
+    let d = new Date();
+    let key = "workout_" + (d.getMonth() + 1) + "_" + (d.getDate()) + "_" + (d.getFullYear());
     firebase.auth().onAuthStateChanged(function (user) {
         // Increment calories burned in database
         let increment = firebase.firestore.FieldValue.increment(randomCalories);
@@ -296,12 +297,3 @@ function update(dbref, obj, promise, key, exercises, totalWeight, totalDistance,
 // The function when a user is completed their workout
 document.getElementById("submitButton").onclick = getFinishedWorkout;
 
-/**
- * Gets the date for the workout id.
- */
-function getDate() {
-
-    let date = new Date(Date.now()).toLocaleString().split(',')[0];
-    date = date.split("/").join("_")
-    return date;
-}
