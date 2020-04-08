@@ -35,8 +35,7 @@ function setLocalStorage() {
                 } else {
                     localStorage.setItem(titleY, snap.data()[workoutArr[i]]["calories"])
                 }
-                localStorage.setItem(titleX, dateArr[i].getDate());
-                localStorage.setItem(titleX, dateArr[i].getDate());
+                localStorage.setItem(titleX, i + 1);
             }
             localStorage.setItem("calories", snap.data().MyCalories);
         })
@@ -50,7 +49,7 @@ function renderGraph() {
     let xArr = [];
     let yArr = [];
     /**
-     * Save calories burned stats and dates into an array.
+     * Save calories burned stats and day numbers into an array.
      */
     for (let i = 0; i < MAX; i++) {
         let titleY = "Y" + i;
@@ -60,7 +59,6 @@ function renderGraph() {
         xArr[i] = parseInt(xArr[i]);
         yArr[i] = parseInt(yArr[i]);
     }
-    xArr.reverse();
     yArr.reverse();
     draw(xArr, yArr);
 }

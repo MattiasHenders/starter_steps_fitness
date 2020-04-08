@@ -25,6 +25,7 @@ function setLocalStorage() {
         dateArr[i].setDate(d.getDate() - i);
         workoutArr[i] = "workout_" + (dateArr[i].getMonth() + 1) + "_" + (dateArr[i].getDate()) + "_" + (dateArr[i].getFullYear());
     }
+    console.log(workoutArr);
     /**
      * Get calories burned stats of a chosen week from database.
      */
@@ -38,7 +39,7 @@ function setLocalStorage() {
                 } else {
                     localStorage.setItem(titleY, snap.data()[workoutArr[i]]["calories"])
                 }
-                localStorage.setItem(titleX, dateArr[i].getDate());
+                localStorage.setItem(titleX, i + 1);
                 console.log(dateArr[i].getDate());
             }
             localStorage.setItem("calories", snap.data().MyCalories);
@@ -53,7 +54,7 @@ function renderGraph() {
     let xArr = [];
     let yArr = [];
     /**
-     * Save the calories burned data of chosen week and the dates into an array for graph later.
+     * Save the calories burned data of chosen week and day number into an array for graph later.
      */
     for (let i = 0; i < MAX; i++) {
         let titleY = "Y" + i;
@@ -63,7 +64,6 @@ function renderGraph() {
         xArr[i] = parseInt(xArr[i]);
         yArr[i] = parseInt(yArr[i]);
     }
-    xArr.reverse();
     yArr.reverse();
     draw(xArr, yArr);
 }
@@ -73,6 +73,8 @@ function renderGraph() {
  * @param {*} yArr y-coordinates
  */
 function draw(xArr, yArr) {
+    console.log(xArr);
+    console.log(yArr);
     let chart1 = new CanvasJS.Chart("Chart1", {
         animationEnabled: false,
         theme: "dark2",
