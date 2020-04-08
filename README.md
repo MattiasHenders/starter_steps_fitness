@@ -30,7 +30,6 @@ Content of the project folder:
 
 ```
  Top level of project folder: 
-├── .gitignore          	    		# Git ignore file
 ├── index.html             	   		# landing HTML file, user must login or sign up to use app
 ├── login.html               			# login HTML file, contains logic for user authentication
 ├── main.html                			# after logged in, you can start your workout, check your schedule, or edit profile
@@ -50,7 +49,6 @@ Content of the project folder:
 
 It has the following subfolders:
 ├── .git                     			# Folder for git repo
-├── .vscode                  			# Folder for Virtual Studio Code
 ├── images                   			# Folder for images
 ├── scripts                  			# Folder for scripts
 	/firebase-starter-steps-fitness.js	# Firebase script for the apps database
